@@ -75,14 +75,17 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Doom Doctor told me to do this because of fish.
 (setq shell-file-name (executable-find "bash"))
 (setq-default vterm-shell (executable-find "fish"))
 (setq-default explicit-shell-file-name (executable-find "fish"))
 
+;; Projectile Project Search path, where projects will load from.
 (setq projectile-project-search-path '(("~/Developer" . 2) "~/.doom.d"))
 
 ;; workaround for large title bar on macOS Sonoma
 ;; see https://github.com/doomemacs/doomemacs/issues/7532
 (add-hook 'doom-after-init-hook (lambda () (tool-bar-mode 1) (tool-bar-mode 0)))
 
+;; Set the Catppuccin Theme type
 (setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
