@@ -78,7 +78,6 @@
 ;; Doom Doctor told me to do this because of fish.
 (setq shell-file-name (executable-find "bash"))
 (setq-default vterm-shell (executable-find "fish"))
-(setq-default explicit-shell-file-name (executable-find "fish"))
 
 ;; Projectile Project Search path, where projects will load from.
 (setq projectile-project-search-path '(("~/Developer" . 2) "~/.doom.d"))
