@@ -79,7 +79,7 @@
 (setq-default vterm-shell (executable-find "fish"))
 (setq-default explicit-shell-file-name (executable-find "fish"))
 
-(setq projectile-project-search-path '(("~/Developer" . 2)))
+(setq projectile-project-search-path '(("~/Developer" . 2) "~/.doom.d"))
 
 ;; workaround for large title bar on macOS Sonoma
 ;; see https://github.com/doomemacs/doomemacs/issues/7532
