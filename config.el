@@ -91,3 +91,7 @@
 
 ;; Font settings
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
+
+;; Indentation settings
+(setq-default indent-tabs-mode t)
+(setq-default tab-width 2)
