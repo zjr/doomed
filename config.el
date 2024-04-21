@@ -88,3 +88,6 @@
 
 ;; Set the Catppuccin Theme type
 (setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
+
+;; Font settings
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
