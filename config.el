@@ -99,12 +99,21 @@
 ;; Window size & position
 ;; Set initial frame size and position
 (defun my/set-initial-frame ()
-  (let* ((base-factor 0.80)
-	 (a-width (* (display-pixel-width) base-factor))
-	 (a-height (* (display-pixel-height) base-factor))
-	 (a-left (truncate (/ (- (display-pixel-width) a-width) 2)))
-	 (a-top (truncate (/ (- (display-pixel-height) a-height) 2))))
+  (let* ((x-factor 0.75)
+	 (y-factor 0.90)
+
+	 (d-geo (assq 'geometry (car (display-monitor-attributes-list))))
+	 (d-width (nth 3 d-geo))
+	 (d-height (nth 4 d-geo))
+
+	 (a-width (* d-width x-factor))
+	 (a-height (* d-height y-factor))
+
+	 (a-left (truncate (/ (- d-width a-width) 2)))
+	 (a-top (truncate (/ (- d-height a-height) 2))))
+
     (set-frame-position (selected-frame) a-left a-top)
     (set-frame-size (selected-frame) (truncate a-width)  (truncate a-height) t)))
+
 (setq frame-resize-pixelwise t)
 (my/set-initial-frame)
