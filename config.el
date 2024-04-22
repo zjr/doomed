@@ -93,16 +93,16 @@
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
 
 ;; Indentation settings
-(setq-default indent-tabs-mode t)
 (setq-default tab-width 2)
+(setq-default indent-tabs-mode t)
 
 ;; Window size & position
 ;; Set initial frame size and position
 (defun my/set-initial-frame ()
   (let* ((base-factor 0.80)
 	 (a-width (* (display-pixel-width) base-factor))
-         (a-height (* (display-pixel-height) base-factor))
-         (a-left (truncate (/ (- (display-pixel-width) a-width) 2)))
+	 (a-height (* (display-pixel-height) base-factor))
+	 (a-left (truncate (/ (- (display-pixel-width) a-width) 2)))
 	 (a-top (truncate (/ (- (display-pixel-height) a-height) 2))))
     (set-frame-position (selected-frame) a-left a-top)
     (set-frame-size (selected-frame) (truncate a-width)  (truncate a-height) t)))
