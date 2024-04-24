@@ -51,4 +51,4 @@
 
 (package! easy-hugo)
 (package! handlebars-mode)
-(package! catppuccin-theme)
+;; (package! catppuccin-theme)

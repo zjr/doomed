@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'catppuccin)
+(setq doom-theme 'doom-nord)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -87,7 +87,7 @@
 (add-hook 'doom-after-init-hook (lambda () (tool-bar-mode 1) (tool-bar-mode 0)))
 
 ;; Set the Catppuccin Theme type
-(setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
+;; (setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
 
 ;; Font settings
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
@@ -114,6 +114,5 @@
 
     (set-frame-position (selected-frame) a-left a-top)
     (set-frame-size (selected-frame) (truncate a-width)  (truncate a-height) t)))
-
 (setq frame-resize-pixelwise t)
 (my/set-initial-frame)
