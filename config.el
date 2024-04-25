@@ -28,11 +28,13 @@
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-nord)
+;; (setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -41,7 +43,6 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
-
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -82,15 +83,9 @@
 ;; Projectile Project Search path, where projects will load from.
 (setq projectile-project-search-path '(("~/Developer" . 2) "~/.doom.d"))
 
-;; workaround for large title bar on macOS Sonoma
-;; see https://github.com/doomemacs/doomemacs/issues/7532
+;; Workaround for large title bar on macOS Sonoma,
+;; see https://github.com/doomemacs/doomemacs/issues/7532.
 (add-hook 'doom-after-init-hook (lambda () (tool-bar-mode 1) (tool-bar-mode 0)))
-
-;; Set the Catppuccin Theme type
-;; (setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
-
-;; Font settings
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
 
 ;; Indentation settings
 (setq-default tab-width 2)
