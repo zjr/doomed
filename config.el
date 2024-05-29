@@ -81,7 +81,7 @@
 (setq-default vterm-shell (executable-find "fish"))
 
 ;; Projectile Project Search path, where projects will load from.
-(setq projectile-project-search-path '(("~/Developer" . 2) "~/.doom.d"))
+(setq projectile-project-search-path '("~/.doom.d/" ("~/Developer" . 2)))
 
 ;; Workaround for large title bar on macOS Sonoma,
 ;; see https://github.com/doomemacs/doomemacs/issues/7532.
