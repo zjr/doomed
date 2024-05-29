@@ -111,3 +111,7 @@
     (set-frame-size (selected-frame) (truncate a-width)  (truncate a-height) t)))
 (setq frame-resize-pixelwise t)
 (my/set-initial-frame)
+
+(map! :n "g h" 'evil-first-non-blank
+      :n "g l" 'evil-last-non-blank
+      :n "g e" 'evil-goto-line)
