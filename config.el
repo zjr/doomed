@@ -115,3 +115,10 @@
 (map! :n "g h" 'evil-first-non-blank
       :n "g l" 'evil-last-non-blank
       :n "g e" 'evil-goto-line)
+
+;; Fix problems with aspell and the --run-together option
+(after! ispell
+  (setq ispell-program-name "aspell"
+        ;; Notice the lack of "--run-together"
+        ispell-extra-args '("--sug-mode=ultra"))
+  (ispell-kill-ispell t))
