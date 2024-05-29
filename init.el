@@ -16,6 +16,9 @@
 
 (setq which-key-idle-delay 0.05)
 
+;; Allow visual line mode, see https://github.com/doomemacs/doomemacs/issues/401
+(setq evil-respect-visual-line-mode t)
+
 (doom! :input
        ;;bidi              ; (tfel ot) thgir etirw uoy gnipleh
        ;;chinese
